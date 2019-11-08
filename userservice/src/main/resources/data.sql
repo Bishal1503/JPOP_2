@@ -1,0 +1,1 @@
+INSERT INTO users(user_id,user_name,age,email) VALUES (1,'Sam',20,'Sam@email.com');
