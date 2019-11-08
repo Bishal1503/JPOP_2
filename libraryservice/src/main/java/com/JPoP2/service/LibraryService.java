@@ -1,72 +1,33 @@
-package com.JPoP2.LibraryService.service;
+package com.epam.libraryservice.service;
 
-import com.JPoP2.LibraryService.error.LibraryNotFoundException;
-import com.JPoP2.LibraryService.model.Library;
-import com.JPoP2.LibraryService.repository.LibraryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.JPoP2.entity.Library;
+import com.JPoP2.model.Book;
+import com.JPoP2.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 
-public class LibraryService {
 
-    @Autowired
-    LibraryRepository libraryRepository;
+public interface LibraryService {
+    public Map<String, String> validateLogin(String emailId, String password);
 
-    public List<Library> getAllBooks()
-    {
-        List<Library> bookList = libraryRepository.findAll();
+    public List<Book> getAllBooks();
 
-        if(bookList.size() > 0) {
-            return bookList;
-        } else {
-            return new ArrayList<Library>();
-        }
-    }
+    public Book getBookById(Long bookId);
 
-    public Library getBookById(Long id) throws LibraryNotFoundException
-    {
-        Optional<Library> book = libraryRepository.findById(id);
+    public Book addBook(Book book);
 
-        if(book.isPresent()) {
-            return book.get();
-        } else {
-            throw new LibraryNotFoundException(id);
-        }
-    }
+    public Long deleteBookById(Long bookId);
 
-    public Library createOrUpdateBook(Library library) throws LibraryNotFoundException {
-        Optional<Library> book = libraryRepository.findById(library.getId());
+    public List<User> getAllUsers();
 
-        if (book.isPresent()) {
-            Library newBook = book.get();
-            newBook.setCallno(library.getCallno());
-            newBook.setName(library.getName());
-            newBook.setAuthor(library.getAuthor());
-            newBook.setPublisher(library.getPublisher());
-            newBook.setQuantity(library.getQuantity());
-            newBook.setIssued(library.getIssued());
-            newBook.setPrice(library.getPrice());
+    public User getUserById(Long userId);
 
-            newBook = libraryRepository.save(newBook);
-            return newBook;
+    public User addUser(User user);
 
-        } else {
-            library = libraryRepository.save(library);
-            return library;
-        }
-    }
+    public Long deleteUserById(Long userId);
 
-    public void deleteBookById(Long id) throws LibraryNotFoundException
-    {
-        Optional<Library> employee = libraryRepository.findById(id);
+    public User updateUserById(Long userId, User user);
 
-        if(employee.isPresent())
-        {
-            libraryRepository.deleteById(id);
-        } else {
-            throw new LibraryNotFoundException(id);
-        }
-    }
+    public Library issueBookToUser(Long userId, Long bookId);
 }

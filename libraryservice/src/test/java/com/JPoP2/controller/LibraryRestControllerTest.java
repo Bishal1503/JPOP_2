@@ -1,6 +1,5 @@
 package com.JPoP2.controller;
 
-import com.JPoP2.LibraryService.model.Library;
 import com.JPoP2.LibraryService.repository.LibraryRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
