@@ -1,7 +1,7 @@
 package com.JPoP2.client;
 
-import com.epam.libraryservice.fallback.UserClientFallback;
-import com.epam.libraryservice.model.User;
+import com.JPoP2.fallback.UserClientFallback;
+import com.JPoP2.model.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

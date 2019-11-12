@@ -1,7 +1,8 @@
 package com.JPoP2.fallback;
 
-import com.epam.libraryservice.client.UserClient;
-import com.epam.libraryservice.model.User;
+
+import com.JPoP2.client.UserClient;
+import com.JPoP2.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
