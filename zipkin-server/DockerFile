@@ -1,0 +1,5 @@
+FROM openjdk:8-alpine
+RUN apk --no-cache add curl
+COPY target/zipkin-server-*.jar /usr/src/zipkin-server.jar
+WORKDIR /usr/src/
+ENTRYPOINT ["java", "-jar", "zipkin-server.jar"]
