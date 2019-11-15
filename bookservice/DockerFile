@@ -1,0 +1,4 @@
+FROM openjdk:8-alpine
+COPY target/book-service-*.jar /usr/src/book-service.jar
+WORKDIR /usr/src/
+ENTRYPOINT ["java", "-jar", "book-service.jar"]

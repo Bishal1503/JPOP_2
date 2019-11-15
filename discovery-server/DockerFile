@@ -1,0 +1,5 @@
+FROM openjdk:8-alpine
+RUN apk --no-cache add curl
+COPY target/eureka-server-*.jar /usr/src/eureka-server.jar
+WORKDIR /usr/src/
+ENTRYPOINT ["java", "-jar", "discovery-server.jar"]

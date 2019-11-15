@@ -1,0 +1,4 @@
+FROM openjdk:8-alpine
+COPY target/library-service-*.jar /usr/src/library-service.jar
+WORKDIR /usr/src/
+ENTRYPOINT ["java", "-jar", "library-service.jar"]
