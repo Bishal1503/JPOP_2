@@ -1,4 +1,4 @@
-package com.JPoP2.LibraryService.repository;
+package com.JPoP2.repository;
 
 import com.JPoP2.entity.Library;
 import org.springframework.data.jpa.repository.JpaRepository;
