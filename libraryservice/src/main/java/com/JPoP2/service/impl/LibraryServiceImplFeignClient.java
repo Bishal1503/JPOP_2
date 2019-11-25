@@ -9,7 +9,7 @@ import com.JPoP2.model.Book;
 import com.JPoP2.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.JPoP2.LibraryService.repository.LibraryRepository;
+import com.JPoP2.repository.LibraryRepository;
 import com.JPoP2.service.LibraryService;
 import java.util.HashMap;
 import java.util.List;

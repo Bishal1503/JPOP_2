@@ -19,7 +19,7 @@ import java.util.Map;
 @Service("v1")
 public class LibraryServiceImplRestTemplate implements com.JPoP2.service.LibraryService {
 	@Autowired
-	private com.JPoP2.LibraryService.repository.LibraryRepository libraryRepository;
+	private com.JPoP2.repository.LibraryRepository libraryRepository;
 
 	@Autowired
 	private SpringSecurityConfig securityConfig;
