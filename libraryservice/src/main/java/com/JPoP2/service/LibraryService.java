@@ -1,4 +1,4 @@
-package com.epam.libraryservice.service;
+package com.JPoP2.service;
 
 import com.JPoP2.entity.Library;
 import com.JPoP2.model.Book;

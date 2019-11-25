@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service("v1")
-public class LibraryServiceImplRestTemplate implements com.epam.libraryservice.service.LibraryService {
+public class LibraryServiceImplRestTemplate implements com.JPoP2.service.LibraryService {
 	@Autowired
 	private com.JPoP2.LibraryService.repository.LibraryRepository libraryRepository;
 

@@ -26,7 +26,7 @@ public class LibraryController {
 
     @Autowired
     @Resource(name = "${api.version}")
-    private com.epam.libraryservice.service.LibraryService libraryService;
+    private com.JPoP2.service.LibraryService libraryService;
 
     @ApiOperation(value = "Login service", response = Map.class)
     @ApiResponses(value = {@ApiResponse(code = 200, message = "If user is valid"),

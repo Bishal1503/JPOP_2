@@ -10,7 +10,7 @@ import com.JPoP2.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.JPoP2.LibraryService.repository.LibraryRepository;
-import com.epam.libraryservice.service.LibraryService;
+import com.JPoP2.service.LibraryService;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
