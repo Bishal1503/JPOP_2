@@ -1,0 +1,4 @@
+FROM openjdk:8-alpine
+COPY target/api-gateway-server-*.jar /usr/src/api-gateway-server.jar
+WORKDIR /usr/src/
+ENTRYPOINT ["java", "-jar", "api-gateway-server.jar"]
